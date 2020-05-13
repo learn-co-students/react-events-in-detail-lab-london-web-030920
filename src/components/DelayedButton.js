@@ -5,7 +5,7 @@ import React from 'react'
 class DelayedButton extends React.Component{
 
     buttonClick = event => {
-        const target = event.target
+        event.persist()
         setTimeout(() => {
         this.props.onDelayedClick(event)
         }, this.props.delay)
