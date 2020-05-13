@@ -1,1 +1,19 @@
-// Code CoordinatesButton Component Here
+
+import React from 'react'
+
+class CoordinatesButton extends React.Component {
+
+    findMouse = (event) => {
+        this.props.onReceiveCoordinates([event.clientX, event.clientY])
+    }
+
+    render(){
+
+        return (
+        <button onClick={this.findMouse}> </button>
+        )
+    }
+
+
+}
+export default CoordinatesButton
